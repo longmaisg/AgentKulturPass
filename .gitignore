@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+
+# uv
+.python-version
+
+# Secrets & env
+.env
+.env.*
+
+# Runtime data (generated, not source)
+memory.json
+
+# OS
+.DS_Store
