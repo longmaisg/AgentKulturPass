@@ -1,179 +1,150 @@
-# scraper.py — step functions for each scraping round
-# Each step reads from DB, does work, saves back to DB.
-# Steps are idempotent — safe to re-run if interrupted.
+# scraper.py — REST API scraping steps
+# Site uses WordPress REST API — no HTML scraping needed.
+# All 215 partners + 18 news items fetched directly from API.
 
 import time
+import json
 import requests
-from bs4 import BeautifulSoup
 from pathlib import Path
+from bs4 import BeautifulSoup
 import db
 
-BASE_URL   = "https://www.kulturpass.lu"
-INDEX_URL  = "https://www.kulturpass.lu/en/partners/"
-HEADERS    = {"User-Agent": "Mozilla/5.0 (compatible; KulturPassBot/1.0)"}
-DELAY      = 1.5   # seconds between requests — be polite
-RAW_DIR    = Path("data/raw")
+API       = "https://www.kulturpass.lu/wp-json/wp/v2"
+HEADERS   = {"User-Agent": "Mozilla/5.0 (compatible; KulturPassBot/1.0)"}
+RAW_DIR   = Path("data/raw")
+PROC_DIR  = Path("data/processed")
+DELAY     = 0.5
 
+# Category ID 9 = Young Audiences — most relevant for families
+FAMILY_CAT_ID = 9
 FAMILY_KEYWORDS = [
-    "family", "famille", "famil", "kanner", "children", "kids", "enfants",
-    "youth", "jeunes", "junior", "atelier", "workshop", "show", "spektakel"
+    "family", "famille", "famil", "kanner", "children", "kids", "enfant",
+    "youth", "jeunes", "junior", "atelier", "workshop", "young", "jeune"
 ]
 
 
-def _get(url: str) -> tuple[str, int]:
-    """Fetch URL. Returns (html, status_code)."""
+def _get(url: str, params: dict = None) -> dict | list | None:
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        return r.text, r.status_code
+        r = requests.get(url, headers=HEADERS, params=params, timeout=15)
+        r.raise_for_status()
+        return r.json(), r.headers
     except Exception as e:
-        db.log("fetch", f"ERROR fetching {url}: {e}")
-        return "", 0
+        db.log("fetch", f"ERROR {url}: {e}")
+        return None, {}
 
 
-# ── Step 1: fetch the partners index page, extract all partner links ──────────
+# ── Step 1: fetch all categories + all partners from REST API ─────────────────
 
-def step1_fetch_index() -> None:
-    db.log("step1", f"Fetching index: {INDEX_URL}")
-    html, status = _get(INDEX_URL)
-    if not html:
-        db.log("step1", "FAILED — empty response")
-        return
-
-    # Save raw HTML
+def step1_fetch_all() -> None:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    (RAW_DIR / "index.html").write_text(html, encoding="utf-8")
-    db.save_page(INDEX_URL, html, status)
 
-    # Extract partner links
-    soup = BeautifulSoup(html, "html.parser")
-    links_found = 0
-    for a in soup.find_all("a", href=True):
-        href = a["href"].strip()
-        if not href or href.startswith("#"):
-            continue
-        if not href.startswith("http"):
-            href = BASE_URL + href
-        if "kulturpass.lu" in href and href != INDEX_URL:
-            db.save_link(href, "partner", INDEX_URL)
-            links_found += 1
+    # 1a. Categories
+    db.log("step1", "Fetching categories...")
+    data, _ = _get(f"{API}/partner-category", {"per_page": 100})
+    if data:
+        for cat in data:
+            db.save_category(cat)
+        (RAW_DIR / "categories.json").write_text(
+            json.dumps(data, indent=2, ensure_ascii=False))
+        db.log("step1", f"{len(data)} categories saved.")
 
-    db.set_progress("step1_done", "true")
-    db.set_progress("current_step", "2")
-    db.log("step1", f"Done. {links_found} links saved.")
-
-
-# ── Step 2: fetch each partner page, save raw HTML ───────────────────────────
-
-def step2_fetch_partners() -> bool:
-    """Fetch one batch of unfetched partner links. Returns True when all done."""
-    with db.connect() as conn:
-        rows = conn.execute(
-            "SELECT url FROM links WHERE fetched=0 LIMIT 10"
-        ).fetchall()
-
-    if not rows:
-        db.set_progress("step2_done", "true")
-        db.set_progress("current_step", "3")
-        db.log("step2", "All partner pages fetched.")
-        return True
-
-    for row in rows:
-        url = row["url"]
-        db.log("step2", f"Fetching: {url}")
-        html, status = _get(url)
-        db.save_page(url, html, status)
-
-        # Save raw file
-        fname = url.replace("https://", "").replace("/", "_")[:80] + ".html"
-        (RAW_DIR / fname).write_text(html, encoding="utf-8")
+    # 1b. All partners (paginated, 100 per page)
+    db.log("step1", "Fetching all partners...")
+    page, total_saved = 1, 0
+    all_partners = []
+    while True:
+        data, headers = _get(f"{API}/partner", {"per_page": 100, "page": page})
+        if not data:
+            break
+        for p in data:
+            score = _family_score(p)
+            db.save_partner(p, family_score=score)
+            all_partners.append(p)
+            total_saved += 1
+        total = int(headers.get("X-WP-Total", 0))
+        db.log("step1", f"  page {page}: {len(data)} partners (total so far: {total_saved}/{total})")
+        if total_saved >= total:
+            break
+        page += 1
         time.sleep(DELAY)
 
-    return False
+    (RAW_DIR / "partners.json").write_text(
+        json.dumps(all_partners, indent=2, ensure_ascii=False))
+    db.log("step1", f"All {total_saved} partners saved.")
+    db.set_progress("step1_done", "true")
+    db.set_progress("current_step", "2")
 
 
-# ── Step 3: parse event details from each fetched page ───────────────────────
+# ── Step 2: fetch all news/events ────────────────────────────────────────────
 
-def step3_parse_events() -> bool:
-    """Parse one batch of fetched-but-unparsed pages. Returns True when done."""
+def step2_fetch_news() -> None:
+    db.log("step2", "Fetching news/events...")
+    data, headers = _get(f"{API}/news", {"per_page": 100})
+    if data:
+        for item in data:
+            db.save_news(item)
+        (RAW_DIR / "news.json").write_text(
+            json.dumps(data, indent=2, ensure_ascii=False))
+        db.log("step2", f"{len(data)} news items saved.")
+
+    db.set_progress("step2_done", "true")
+    db.set_progress("current_step", "3")
+
+
+# ── Step 3: filter + export family-friendly partners ─────────────────────────
+
+def step3_export_family() -> None:
+    PROC_DIR.mkdir(parents=True, exist_ok=True)
     with db.connect() as conn:
-        rows = conn.execute(
-            "SELECT l.url, p.html FROM links l JOIN pages p ON l.url=p.url "
-            "WHERE l.fetched=1 AND l.parsed=0 LIMIT 20"
+        partners = conn.execute(
+            "SELECT wp_id,name,link,category_ids,family_score FROM partners "
+            "ORDER BY family_score DESC"
         ).fetchall()
 
-    if not rows:
-        db.set_progress("step3_done", "true")
-        db.set_progress("current_step", "4")
-        db.log("step3", "All pages parsed.")
-        return True
-
-    for row in rows:
-        url, html = row["url"], row["html"]
-        if not html:
-            with db.connect() as conn:
-                conn.execute("UPDATE links SET parsed=1 WHERE url=?", (url,))
-            continue
-
-        soup = BeautifulSoup(html, "html.parser")
-        data = _parse_page(soup, url)
-        db.save_event(url, data)
-
-    return False
-
-
-def _parse_page(soup: BeautifulSoup, url: str) -> dict:
-    """Extract all useful fields from a partner page."""
-    title       = soup.find("h1")
-    description = soup.find("meta", {"name": "description"})
-    og_title    = soup.find("meta", {"property": "og:title"})
-    og_desc     = soup.find("meta", {"property": "og:description"})
-
-    text = soup.get_text(" ", strip=True).lower()
-    family_score = sum(1 for kw in FAMILY_KEYWORDS if kw in text)
-
-    # Grab all visible text blocks as raw data
-    paragraphs = [p.get_text(strip=True) for p in soup.find_all("p") if p.get_text(strip=True)]
-
-    return {
-        "partner_name": (og_title or title or {}).get("content") or (title.get_text(strip=True) if title else ""),
-        "title":        (og_title or {}).get("content") or (title.get_text(strip=True) if title else ""),
-        "description":  (og_desc or description or {}).get("content", ""),
-        "date_text":    "",   # extracted in later pass if available
-        "location":     "",
-        "category":     _guess_category(url, text),
-        "family_score": family_score,
-        "paragraphs":   paragraphs[:10],
-        "url":          url,
-    }
-
-
-def _guess_category(url: str, text: str) -> str:
-    cats = {"museum": "museum", "theatre": "theatre", "music": "music",
-            "concert": "music", "cinema": "cinema", "sport": "sport",
-            "art": "art", "gallery": "art"}
-    for kw, cat in cats.items():
-        if kw in url.lower() or kw in text[:500]:
-            return cat
-    return "other"
-
-
-# ── Step 4: filter and rank family events ────────────────────────────────────
-
-def step4_filter_family() -> None:
+    categories = {}
     with db.connect() as conn:
-        events = conn.execute(
-            "SELECT url, partner_name, title, description, category, family_score "
-            "FROM events ORDER BY family_score DESC"
-        ).fetchall()
+        for c in conn.execute("SELECT id,name FROM categories"):
+            categories[c["id"]] = c["name"]
 
-    results = [dict(e) for e in events]
-    family  = [e for e in results if e["family_score"] > 0]
+    results = []
+    for p in partners:
+        cat_ids = json.loads(p["category_ids"] or "[]")
+        cat_names = [categories.get(i, str(i)) for i in cat_ids]
+        results.append({
+            "name":         p["name"],
+            "link":         p["link"],
+            "categories":   cat_names,
+            "family_score": p["family_score"],
+            "young_audiences": FAMILY_CAT_ID in cat_ids,
+        })
 
-    import json
-    out = Path("data/processed/family_events.json")
-    out.parent.mkdir(parents=True, exist_ok=True)
+    # Young Audiences (cat 9) first, then by family_score
+    family = [r for r in results if r["young_audiences"] or r["family_score"] > 0]
+    family.sort(key=lambda x: (x["young_audiences"], x["family_score"]), reverse=True)
+
+    out = PROC_DIR / "family_partners.json"
     out.write_text(json.dumps(family, indent=2, ensure_ascii=False))
+    db.log("step3", f"{len(family)} family-friendly partners → {out}")
 
-    db.set_progress("step4_done", "true")
+    # Also print top 10
+    db.log("step3", "Top family partners:")
+    for p in family[:10]:
+        ya = "★" if p["young_audiences"] else " "
+        db.log("step3", f"  {ya} [{p['family_score']}] {p['name']} — {', '.join(p['categories'])}")
+
+    db.set_progress("step3_done", "true")
     db.set_progress("current_step", "done")
-    db.log("step4", f"Done. {len(family)} family-friendly events saved to {out}")
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _family_score(partner: dict) -> int:
+    """Score a partner for family-friendliness."""
+    score = 0
+    cat_ids = partner.get("partner-category", [])
+    if FAMILY_CAT_ID in cat_ids:
+        score += 5  # Young Audiences category = strong signal
+    text = (partner.get("title",{}).get("rendered","") + " " +
+            partner.get("content",{}).get("rendered","")).lower()
+    score += sum(1 for kw in FAMILY_KEYWORDS if kw in text)
+    return score

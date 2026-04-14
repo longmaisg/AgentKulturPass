@@ -1,0 +1,1421 @@
+[
+  {
+    "id": 5,
+    "count": 133,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels",
+    "name": "Culturels",
+    "slug": "culturels",
+    "taxonomy": "partner-category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Culturels Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Culturels Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=culturels\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\",\"name\":\"Culturels Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Culturels Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Culturels Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels",
+            "name": "Culturels Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "count": 33,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more",
+    "name": "Festivals &amp; More",
+    "slug": "festivals-more",
+    "taxonomy": "partner-category",
+    "parent": 5,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Festivals &amp; More Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Festivals &amp; More Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=festivals-more\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more\",\"name\":\"Festivals &amp; More Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\",\"item\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Festivals &amp; More\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Festivals &amp; More Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Festivals &amp; More Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more",
+            "name": "Festivals &amp; More Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=festivals-more#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels",
+                "item": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Festivals &amp; More"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/32",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=32"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "count": 10,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels",
+    "name": "Institutionnels",
+    "slug": "institutionnels",
+    "taxonomy": "partner-category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Institutionnels Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Institutionnels Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=institutionnels\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels\",\"name\":\"Institutionnels Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Institutionnels\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Institutionnels Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Institutionnels Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels",
+            "name": "Institutionnels Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=institutionnels#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Institutionnels"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/34",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=34"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "count": 28,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies",
+    "name": "Museums &amp; Movies",
+    "slug": "museums-movies",
+    "taxonomy": "partner-category",
+    "parent": 5,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Museums &amp; Movies Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Museums &amp; Movies Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=museums-movies\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies\",\"name\":\"Museums &amp; Movies Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\",\"item\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Museums &amp; Movies\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Museums &amp; Movies Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Museums &amp; Movies Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies",
+            "name": "Museums &amp; Movies Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=museums-movies#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels",
+                "item": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Museums &amp; Movies"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/30",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=30"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "count": 45,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music",
+    "name": "Music",
+    "slug": "music",
+    "taxonomy": "partner-category",
+    "parent": 5,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Music Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Music Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=music\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music\",\"name\":\"Music Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\",\"item\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Music\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Music Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Music Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music",
+            "name": "Music Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=music#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels",
+                "item": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Music"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "count": 36,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts",
+    "name": "Performing Arts",
+    "slug": "performing-arts",
+    "taxonomy": "partner-category",
+    "parent": 5,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Performing Arts Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Performing Arts Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=performing-arts\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts\",\"name\":\"Performing Arts Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\",\"item\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Performing Arts\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Performing Arts Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Performing Arts Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts",
+            "name": "Performing Arts Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=performing-arts#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels",
+                "item": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Performing Arts"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/31",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=31"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "count": 71,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux",
+    "name": "Sociaux",
+    "slug": "sociaux",
+    "taxonomy": "partner-category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Sociaux Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Sociaux Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=sociaux\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux\",\"name\":\"Sociaux Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sociaux\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Sociaux Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Sociaux Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux",
+            "name": "Sociaux Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=sociaux#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sociaux"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "count": 33,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops",
+    "name": "Workshops",
+    "slug": "workshops",
+    "taxonomy": "partner-category",
+    "parent": 5,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Workshops Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Workshops Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=workshops\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops\",\"name\":\"Workshops Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Culturels\",\"item\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"Workshops\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Workshops Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Workshops Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops",
+            "name": "Workshops Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=workshops#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Culturels",
+                "item": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=culturels"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Workshops"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/33",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "up": [
+        {
+          "embeddable": true,
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/5"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=33"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "count": 32,
+    "description": "",
+    "link": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences",
+    "name": "Young Audiences",
+    "slug": "young-audiences",
+    "taxonomy": "partner-category",
+    "parent": 0,
+    "meta": [],
+    "acf": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.2 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Young Audiences Archives - Kulturpass.lu</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"fr_FR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Young Audiences Archives - Kulturpass.lu\" />\n<meta property=\"og:url\" content=\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&amp;term=young-audiences\" />\n<meta property=\"og:site_name\" content=\"Kulturpass.lu\" />\n<meta property=\"og:image\" content=\"https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1512\" />\n\t<meta property=\"og:image:height\" content=\"1134\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences\",\"url\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences\",\"name\":\"Young Audiences Archives - Kulturpass.lu\",\"isPartOf\":{\"@id\":\"https://www.kulturpass.lu/fr/#website\"},\"breadcrumb\":{\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences#breadcrumb\"},\"inLanguage\":\"fr-FR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://www.kulturpass.lu/fr/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Young Audiences\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://www.kulturpass.lu/fr/#website\",\"url\":\"https://www.kulturpass.lu/fr/\",\"name\":\"Kulturpass.lu\",\"description\":\"Let culture move you\",\"publisher\":{\"@id\":\"https://www.kulturpass.lu/fr/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://www.kulturpass.lu/fr/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"fr-FR\"},{\"@type\":\"Organization\",\"@id\":\"https://www.kulturpass.lu/fr/#organization\",\"name\":\"Kulturpass\",\"url\":\"https://www.kulturpass.lu/fr/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"fr-FR\",\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\",\"url\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"contentUrl\":\"https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png\",\"width\":910,\"height\":910,\"caption\":\"Kulturpass\"},\"image\":{\"@id\":\"https://www.kulturpass.lu/fr/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/culturall.lu\",\"https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Young Audiences Archives - Kulturpass.lu",
+      "robots": {
+        "index": "noindex",
+        "follow": "follow"
+      },
+      "og_locale": "fr_FR",
+      "og_type": "article",
+      "og_title": "Young Audiences Archives - Kulturpass.lu",
+      "og_url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences",
+      "og_site_name": "Kulturpass.lu",
+      "og_image": [
+        {
+          "width": 1512,
+          "height": 1134,
+          "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/seo.jpg",
+          "type": "image/jpeg"
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences",
+            "url": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences",
+            "name": "Young Audiences Archives - Kulturpass.lu",
+            "isPartOf": {
+              "@id": "https://www.kulturpass.lu/fr/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences#breadcrumb"
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kulturpass.lu/fr/?taxonomy=partner-category&term=young-audiences#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.kulturpass.lu/fr/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Young Audiences"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.kulturpass.lu/fr/#website",
+            "url": "https://www.kulturpass.lu/fr/",
+            "name": "Kulturpass.lu",
+            "description": "Let culture move you",
+            "publisher": {
+              "@id": "https://www.kulturpass.lu/fr/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.kulturpass.lu/fr/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.kulturpass.lu/fr/#organization",
+            "name": "Kulturpass",
+            "url": "https://www.kulturpass.lu/fr/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "fr-FR",
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/",
+              "url": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "contentUrl": "https://www.kulturpass.lu/wp-content/uploads/2025/06/Kulturpass-Ico.png",
+              "width": 910,
+              "height": 910,
+              "caption": "Kulturpass"
+            },
+            "image": {
+              "@id": "https://www.kulturpass.lu/fr/#/schema/logo/image/"
+            },
+            "sameAs": [
+              "https://www.facebook.com/culturall.lu",
+              "https://www.youtube.com/channel/UCcyTPpGjqiwlMxaBwhZLHEQ"
+            ]
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category/9",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner-category"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/taxonomies/partner-category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://www.kulturpass.lu/fr/wp-json/wp/v2/partner?partner-category=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

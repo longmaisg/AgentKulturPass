@@ -1,5 +1,5 @@
 # db.py — SQLite database setup and helpers
-# All scraped data, progress, and logs stored here.
+# Tables: categories, partners, news, progress, logs
 # File: data/kulturpass.db
 
 import sqlite3
@@ -18,7 +18,6 @@ def connect() -> sqlite3.Connection:
 
 
 def init_db() -> None:
-    """Create all tables if they don't exist."""
     with connect() as conn:
         conn.executescript("""
         CREATE TABLE IF NOT EXISTS progress (
@@ -26,34 +25,34 @@ def init_db() -> None:
             value      TEXT,
             updated_at TEXT
         );
-        CREATE TABLE IF NOT EXISTS links (
-            id         INTEGER PRIMARY KEY AUTOINCREMENT,
-            url        TEXT UNIQUE,
-            type       TEXT,
-            source_url TEXT,
-            fetched    INTEGER DEFAULT 0,
-            parsed     INTEGER DEFAULT 0,
+        CREATE TABLE IF NOT EXISTS categories (
+            id         INTEGER PRIMARY KEY,
+            name       TEXT,
+            slug       TEXT,
+            count      INTEGER
+        );
+        CREATE TABLE IF NOT EXISTS partners (
+            wp_id        INTEGER PRIMARY KEY,
+            name         TEXT,
+            link         TEXT,
+            category_ids TEXT,
+            content_html TEXT,
+            website      TEXT,
+            address      TEXT,
+            phone        TEXT,
+            email        TEXT,
+            family_score INTEGER DEFAULT 0,
+            raw_json     TEXT,
+            created_at   TEXT
+        );
+        CREATE TABLE IF NOT EXISTS news (
+            wp_id      INTEGER PRIMARY KEY,
+            title      TEXT,
+            link       TEXT,
+            content    TEXT,
+            date       TEXT,
+            raw_json   TEXT,
             created_at TEXT
-        );
-        CREATE TABLE IF NOT EXISTS pages (
-            id         INTEGER PRIMARY KEY AUTOINCREMENT,
-            url        TEXT UNIQUE,
-            html       TEXT,
-            status     INTEGER,
-            fetched_at TEXT
-        );
-        CREATE TABLE IF NOT EXISTS events (
-            id             INTEGER PRIMARY KEY AUTOINCREMENT,
-            url            TEXT,
-            partner_name   TEXT,
-            title          TEXT,
-            description    TEXT,
-            date_text      TEXT,
-            location       TEXT,
-            category       TEXT,
-            family_score   INTEGER DEFAULT 0,
-            raw_json       TEXT,
-            created_at     TEXT
         );
         CREATE TABLE IF NOT EXISTS logs (
             id         INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -75,7 +74,7 @@ def set_progress(key: str, value) -> None:
     with connect() as conn:
         conn.execute(
             "INSERT INTO progress(key,value,updated_at) VALUES(?,?,?) "
-            "ON CONFLICT(key) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at",
+            "ON CONFLICT(key) DO UPDATE SET value=excluded.value,updated_at=excluded.updated_at",
             (key, str(value), now)
         )
 
@@ -88,35 +87,38 @@ def log(step: str, message: str) -> None:
                      (step, message, now))
 
 
-def save_link(url: str, type_: str, source_url: str) -> None:
-    now = datetime.utcnow().isoformat(timespec="seconds")
+def save_category(data: dict) -> None:
     with connect() as conn:
         conn.execute(
-            "INSERT OR IGNORE INTO links(url,type,source_url,created_at) VALUES(?,?,?,?)",
-            (url, type_, source_url, now)
+            "INSERT OR REPLACE INTO categories(id,name,slug,count) VALUES(?,?,?,?)",
+            (data["id"], data["name"], data.get("slug",""), data.get("count",0))
         )
 
 
-def save_page(url: str, html: str, status: int) -> None:
+def save_partner(data: dict, family_score: int = 0) -> None:
     now = datetime.utcnow().isoformat(timespec="seconds")
+    cat_ids = json.dumps(data.get("partner-category", []))
     with connect() as conn:
-        conn.execute(
-            "INSERT OR REPLACE INTO pages(url,html,status,fetched_at) VALUES(?,?,?,?)",
-            (url, html, status, now)
+        conn.execute("""
+            INSERT OR REPLACE INTO partners
+            (wp_id,name,link,category_ids,content_html,website,address,
+             phone,email,family_score,raw_json,created_at)
+            VALUES(?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (data["id"], data["title"]["rendered"], data.get("link",""),
+             cat_ids, data.get("content",{}).get("rendered",""),
+             data.get("_website",""), data.get("_address",""),
+             data.get("_phone",""), data.get("_email",""),
+             family_score, json.dumps(data, ensure_ascii=False), now)
         )
-        conn.execute("UPDATE links SET fetched=1 WHERE url=?", (url,))
 
 
-def save_event(url: str, data: dict) -> None:
+def save_news(data: dict) -> None:
     now = datetime.utcnow().isoformat(timespec="seconds")
     with connect() as conn:
         conn.execute("""
-            INSERT INTO events(url,partner_name,title,description,date_text,
-                               location,category,family_score,raw_json,created_at)
-            VALUES(?,?,?,?,?,?,?,?,?,?)""",
-            (url, data.get("partner_name",""), data.get("title",""),
-             data.get("description",""), data.get("date_text",""),
-             data.get("location",""), data.get("category",""),
-             data.get("family_score", 0), json.dumps(data, ensure_ascii=False), now)
+            INSERT OR REPLACE INTO news(wp_id,title,link,content,date,raw_json,created_at)
+            VALUES(?,?,?,?,?,?,?)""",
+            (data["id"], data["title"]["rendered"], data.get("link",""),
+             data.get("content",{}).get("rendered",""),
+             data.get("date",""), json.dumps(data, ensure_ascii=False), now)
         )
-        conn.execute("UPDATE links SET parsed=1 WHERE url=?", (url,))

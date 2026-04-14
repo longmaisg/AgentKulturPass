@@ -20,34 +20,27 @@ def main() -> None:
     db.log("run", f"Resuming at step {step}")
 
     if step == "1":
-        scraper.step1_fetch_index()
-        git_commit("step1: fetched partners index")
+        scraper.step1_fetch_all()
+        git_commit("step1: fetched all partners and categories via API")
 
     elif step == "2":
-        done = scraper.step2_fetch_partners()
-        git_commit("step2: fetched partner pages batch")
-        if not done:
-            db.log("run", "More pages to fetch — run again.")
+        scraper.step2_fetch_news()
+        git_commit("step2: fetched all news/events")
 
     elif step == "3":
-        done = scraper.step3_parse_events()
-        git_commit("step3: parsed events batch")
-        if not done:
-            db.log("run", "More pages to parse — run again.")
-
-    elif step == "4":
-        scraper.step4_filter_family()
-        git_commit("step4: family events filtered and saved")
+        scraper.step3_export_family()
+        git_commit("step3: family partners filtered and exported")
 
     elif step == "done":
-        db.log("run", "All steps complete. Check data/processed/family_events.json")
+        db.log("run", "All steps complete.")
+        db.log("run", "Results: data/processed/family_partners.json")
 
-    # Print summary
+    # Print DB summary
     with db.connect() as conn:
-        n_links  = conn.execute("SELECT COUNT(*) FROM links").fetchone()[0]
-        n_pages  = conn.execute("SELECT COUNT(*) FROM pages").fetchone()[0]
-        n_events = conn.execute("SELECT COUNT(*) FROM events").fetchone()[0]
-    db.log("run", f"DB state — links:{n_links} pages:{n_pages} events:{n_events}")
+        n_cat      = conn.execute("SELECT COUNT(*) FROM categories").fetchone()[0]
+        n_partners = conn.execute("SELECT COUNT(*) FROM partners").fetchone()[0]
+        n_news     = conn.execute("SELECT COUNT(*) FROM news").fetchone()[0]
+    db.log("run", f"DB — categories:{n_cat} partners:{n_partners} news:{n_news}")
 
 
 if __name__ == "__main__":
