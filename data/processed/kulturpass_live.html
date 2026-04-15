@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KulturPass Luxembourg – Family Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;font-size:14px;background:#f4f4f8;color:#222}
+.wrap{max-width:980px;margin:0 auto;padding:12px}
+h1{font-size:1.3rem;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.subtitle{font-size:12px;color:#666;margin-bottom:14px}
+a{color:#0055cc}
+/* Tabs */
+.tabs{display:flex;gap:4px;margin-bottom:12px}
+.tab{padding:7px 18px;border-radius:6px 6px 0 0;border:1px solid #ccc;border-bottom:none;background:#e8e8f0;cursor:pointer;font-weight:600;font-size:13px;color:#555}
+.tab.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+.panel{display:none}.panel.active{display:block}
+/* Loading */
+.loader{text-align:center;padding:40px;color:#666;font-size:15px}
+.spinner{display:inline-block;width:22px;height:22px;border:3px solid #ccc;border-top-color:#1a1a2e;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error{background:#fff0f0;border:1px solid #f99;border-radius:6px;padding:12px;color:#c00;margin-bottom:10px}
+/* Cache bar */
+.cachebar{font-size:11px;color:#888;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.refresh-btn{padding:2px 10px;border-radius:10px;border:1px solid #aaa;background:#fff;cursor:pointer;font-size:11px}
+.refresh-btn:hover{background:#1a1a2e;color:#fff}
+/* Controls */
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px;align-items:center}
+input[type=search]{flex:1;min-width:160px;padding:6px 10px;border:1px solid #ccc;border-radius:6px;font-size:13px}
+select{padding:6px 8px;border:1px solid #ccc;border-radius:6px;font-size:13px;background:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.btn{padding:3px 10px;border-radius:12px;border:1px solid #aaa;background:#fff;cursor:pointer;font-size:12px}
+.btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+.stats{font-size:12px;color:#888;margin-bottom:6px}
+/* Table */
+.tbl-wrap{max-height:65vh;overflow-y:auto;border-radius:0 6px 6px 6px;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+table{width:100%;border-collapse:collapse;background:#fff}
+th{background:#1a1a2e;color:#fff;padding:8px 10px;text-align:left;font-size:12px;font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0;z-index:1}
+th:hover{background:#2d2d5e}
+th .arr{margin-left:3px;opacity:.5;font-size:10px}
+th.sorted .arr{opacity:1}
+td{padding:6px 10px;border-bottom:1px solid #eee;vertical-align:top;font-size:13px}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#f0f4ff}
+.name a{color:#0055cc;text-decoration:none;font-weight:500}
+.name a:hover{text-decoration:underline}
+.ya{background:#e65c00;color:#fff;border-radius:3px;font-size:10px;padding:1px 5px;margin-right:4px;display:inline-block}
+.score{background:#e8f4e8;color:#2d6a2d;border-radius:10px;font-size:11px;padding:1px 7px;font-weight:600;display:inline-block}
+.score0{background:#f0f0f0;color:#aaa}
+.tag{background:#e8eaf6;color:#3949ab;border-radius:3px;font-size:11px;padding:1px 5px;margin:1px 2px 1px 0;display:inline-block}
+/* News */
+.news-grid{display:flex;flex-direction:column;gap:8px;max-height:75vh;overflow-y:auto;padding-right:4px}
+.card{background:#fff;border-radius:8px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,.1);border-left:4px solid #1a1a2e}
+.card-date{font-size:11px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.card-title a{font-size:13px;font-weight:600;color:#0055cc;text-decoration:none;line-height:1.4}
+.card-title a:hover{text-decoration:underline}
+.card-excerpt{font-size:12px;color:#555;margin-top:5px;line-height:1.5}
+.card-badge{display:inline-block;background:#fff3e0;color:#e65c00;border-radius:3px;font-size:10px;padding:1px 6px;margin-top:5px;font-weight:600}
+@media(max-width:580px){th:nth-child(3),td:nth-child(3){display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎭 KulturPass Luxembourg – Family Guide</h1>
+  <p class="subtitle">Live data from <a href="https://www.kulturpass.lu/en/partners/" target="_blank">kulturpass.lu</a> · cached for 24h in your browser</p>
+
+  <div id="loading" class="loader"><span class="spinner"></span>Loading live data from KulturPass…</div>
+  <div id="error" class="error" style="display:none"></div>
+
+  <div id="app" style="display:none">
+    <div class="cachebar">
+      <span id="cache-info"></span>
+      <button class="refresh-btn" onclick="forceRefresh()">↺ Refresh now</button>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('partners',this)">🏛 All Partners</div>
+      <div class="tab" onclick="switchTab('news',this)">📅 News &amp; Events</div>
+    </div>
+
+    <!-- PARTNERS -->
+    <div id="panel-partners" class="panel active">
+      <div class="controls">
+        <input type="search" id="q" placeholder="Search name or category…" oninput="renderPartners()">
+        <select id="sortCol" onchange="renderPartners()">
+          <option value="family_score">Sort: Family Score</option>
+          <option value="name">Sort: Name</option>
+          <option value="categories">Sort: Category</option>
+        </select>
+        <select id="sortDir" onchange="renderPartners()">
+          <option value="desc">↓ Descending</option>
+          <option value="asc">↑ Ascending</option>
+        </select>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="stats" id="stats"></div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr>
+            <th onclick="sortBy('name')" id="th-name">Name <span class="arr">↕</span></th>
+            <th onclick="sortBy('categories')" id="th-categories">Categories <span class="arr">↕</span></th>
+            <th onclick="sortBy('family_score')" id="th-family_score">Family ★ <span class="arr">↕</span></th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- NEWS -->
+    <div id="panel-news" class="panel">
+      <p class="stats">Monthly newsletters with upcoming events at partner venues. Click titles to read full articles.</p>
+      <br>
+      <div class="news-grid" id="news-grid"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'https://www.kulturpass.lu/wp-json/wp/v2';
+const FAMILY_CAT_ID = 9;
+const FAMILY_KW = ['family','famille','famil','kanner','children','kids','enfant','youth','jeunes','junior','atelier','workshop','young','jeune'];
+const CACHE_KEY = 'kulturpass_v2';
+const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+
+let PARTNERS = [], CATS_MAP = {};
+let activeCat = null, sortCol = 'family_score', sortDir = 'desc';
+
+// ── HTML helpers ────────────────────────────────────────────────────────────
+function decodeHTML(s) {
+  const t = document.createElement('textarea');
+  t.innerHTML = s; return t.value;
+}
+function stripHTML(s) {
+  const d = document.createElement('div');
+  d.innerHTML = s;
+  return d.textContent.replace(/\s+/g,' ').trim();
+}
+
+// ── Family score (mirrors Python scraper) ──────────────────────────────────
+function familyScore(partner, catIds) {
+  let score = 0;
+  if (catIds.includes(FAMILY_CAT_ID)) score += 5;
+  const text = (decodeHTML(partner.title.rendered) + ' ' +
+    stripHTML((partner.content || {}).rendered || '')).toLowerCase();
+  FAMILY_KW.forEach(kw => { if (text.includes(kw)) score++; });
+  return score;
+}
+
+// ── Fetch with pagination ──────────────────────────────────────────────────
+async function fetchAllPages(endpoint, params = {}) {
+  let page = 1, all = [], total = Infinity;
+  while (all.length < total) {
+    const qs = new URLSearchParams({...params, per_page: 100, page}).toString();
+    const res = await fetch(`${API}/${endpoint}?${qs}`);
+    if (!res.ok) throw new Error(`${endpoint} page ${page}: HTTP ${res.status}`);
+    const data = await res.json();
+    total = parseInt(res.headers.get('X-WP-Total') || data.length);
+    if (!data.length) break;
+    all.push(...data);
+    page++;
+  }
+  return all;
+}
+
+// ── Load data (cache-first) ────────────────────────────────────────────────
+async function loadData(force = false) {
+  if (!force) {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (raw) {
+        const {ts, partners, news} = JSON.parse(raw);
+        if (Date.now() - ts < CACHE_TTL) {
+          showCacheInfo(ts, false);
+          return {partners, news};
+        }
+      }
+    } catch(e) {}
+  }
+
+  // Live fetch
+  const [catsRaw, partnersRaw, newsRaw] = await Promise.all([
+    fetchAllPages('partner-category'),
+    fetchAllPages('partner'),
+    fetchAllPages('news'),
+  ]);
+
+  // Build category map
+  const catsMap = {};
+  catsRaw.forEach(c => catsMap[c.id] = decodeHTML(c.name));
+
+  // Process partners
+  const partners = partnersRaw.map(p => {
+    const catIds = p['partner-category'] || [];
+    return {
+      name: decodeHTML(p.title.rendered),
+      link: p.link,
+      categories: catIds.map(id => catsMap[id] || String(id)),
+      family_score: familyScore(p, catIds),
+      young_audiences: catIds.includes(FAMILY_CAT_ID),
+    };
+  });
+
+  // Process news
+  const news = newsRaw.map(n => ({
+    title: decodeHTML(n.title.rendered),
+    date: n.date.slice(0, 10),
+    link: n.link,
+    excerpt: stripHTML((n.content || {}).rendered || '').slice(0, 350),
+  })).sort((a,b) => b.date.localeCompare(a.date));
+
+  const ts = Date.now();
+  try { localStorage.setItem(CACHE_KEY, JSON.stringify({ts, partners, news})); } catch(e) {}
+  showCacheInfo(ts, true);
+  return {partners, news};
+}
+
+function showCacheInfo(ts, fresh) {
+  const d = new Date(ts);
+  const label = fresh ? 'Just fetched live' : 'Cached';
+  document.getElementById('cache-info').textContent =
+    `${label}: ${d.toLocaleDateString()} ${d.toLocaleTimeString()} · refreshes every 24h`;
+}
+
+async function forceRefresh() {
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('loading').style.display = 'block';
+  await init(true);
+}
+
+// ── UI ─────────────────────────────────────────────────────────────────────
+function switchTab(name, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+}
+
+function buildFilters(partners) {
+  const cats = [...new Set(partners.flatMap(p => p.categories))].sort();
+  const el = document.getElementById('filters');
+  el.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'btn active'; allBtn.textContent = 'All';
+  allBtn.onclick = () => { activeCat = null; el.querySelectorAll('.btn').forEach(b => b.classList.remove('active')); allBtn.classList.add('active'); renderPartners(); };
+  el.appendChild(allBtn);
+  cats.forEach(c => {
+    const b = document.createElement('button'); b.className = 'btn'; b.textContent = c;
+    b.onclick = () => { activeCat = c; el.querySelectorAll('.btn').forEach(b => b.classList.remove('active')); b.classList.add('active'); renderPartners(); };
+    el.appendChild(b);
+  });
+}
+
+function sortBy(col) {
+  if (sortCol === col) sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+  else { sortCol = col; sortDir = col === 'family_score' ? 'desc' : 'asc'; }
+  document.getElementById('sortCol').value = sortCol;
+  document.getElementById('sortDir').value = sortDir;
+  renderPartners();
+}
+
+function renderPartners() {
+  sortCol = document.getElementById('sortCol').value;
+  sortDir = document.getElementById('sortDir').value;
+  const q = document.getElementById('q').value.toLowerCase().trim();
+  ['name','categories','family_score'].forEach(c => {
+    const th = document.getElementById('th-' + c);
+    th.classList.toggle('sorted', c === sortCol);
+    th.querySelector('.arr').textContent = c === sortCol ? (sortDir === 'asc' ? '↑' : '↓') : '↕';
+  });
+  let rows = PARTNERS.filter(p => {
+    if (activeCat && !p.categories.includes(activeCat)) return false;
+    if (q && !(p.name + ' ' + p.categories.join(' ')).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  rows.sort((a, b) => {
+    let va = a[sortCol], vb = b[sortCol];
+    if (Array.isArray(va)) va = va.join(', ');
+    if (Array.isArray(vb)) vb = vb.join(', ');
+    if (typeof va === 'number') return sortDir === 'asc' ? va - vb : vb - va;
+    return sortDir === 'asc' ? String(va).localeCompare(String(vb)) : String(vb).localeCompare(String(va));
+  });
+  document.getElementById('stats').textContent = 'Showing ' + rows.length + ' of ' + PARTNERS.length + ' partners';
+  document.getElementById('tbody').innerHTML = rows.map(p => {
+    const ya = p.young_audiences ? '<span class="ya">★ Young</span>' : '';
+    const sc = p.family_score > 0 ? '<span class="score">' + p.family_score + '</span>' : '<span class="score score0">0</span>';
+    const tags = p.categories.map(c => '<span class="tag">' + c + '</span>').join('');
+    return '<tr><td class="name">' + ya + '<a href="' + p.link + '" target="_blank" rel="noopener">' + p.name + '</a></td><td>' + tags + '</td><td style="text-align:center">' + sc + '</td></tr>';
+  }).join('');
+}
+
+function renderNews(news) {
+  document.getElementById('news-grid').innerHTML = news.map(n => {
+    const hasKids = /(enfant|kanner|famil|jeune|young|kids|children|musical|atelier)/i.test(n.title + ' ' + n.excerpt);
+    const badge = hasKids ? '<span class="card-badge">👨‍👩‍👧 Family</span>' : '';
+    return '<div class="card"><div class="card-date">' + n.date + '</div><div class="card-title"><a href="' + n.link + '" target="_blank" rel="noopener">' + n.title + '</a></div><div class="card-excerpt">' + n.excerpt + '</div>' + badge + '</div>';
+  }).join('');
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────
+async function init(force = false) {
+  document.getElementById('error').style.display = 'none';
+  try {
+    const {partners, news} = await loadData(force);
+    PARTNERS = partners;
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    // Update tab labels with counts
+    document.querySelectorAll('.tab')[0].textContent = '🏛 All Partners (' + partners.length + ')';
+    document.querySelectorAll('.tab')[1].textContent = '📅 News & Events (' + news.length + ')';
+    buildFilters(partners);
+    renderPartners();
+    renderNews(news);
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    const errEl = document.getElementById('error');
+    errEl.style.display = 'block';
+    errEl.textContent = '⚠ Could not load data: ' + e.message + '. The KulturPass site may be temporarily unavailable. Try refreshing.';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

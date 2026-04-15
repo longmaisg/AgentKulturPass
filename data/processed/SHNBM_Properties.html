@@ -1,0 +1,213 @@
+<!--
+  SNHBM Properties for Sale - Blogger Version
+  Paste this entire content into a Blogger post using the HTML editor view.
+-->
+<style>
+  .snhbm-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; max-width: 100%; margin: 0 auto; }
+  .snhbm-wrap h2 { text-align: center; margin-bottom: 6px; color: #1a365d; font-size: 24px; }
+  .snhbm-wrap .sub { text-align: center; color: #888; font-size: 13px; margin-bottom: 18px; }
+  .snhbm-wrap .sub a { color: #2b6cb0; }
+  .snhbm-wrap .ctrls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+  .snhbm-wrap .ctrls input, .snhbm-wrap .ctrls select { padding: 7px 10px; border: 1px solid #cbd5e0; border-radius: 5px; font-size: 13px; }
+  .snhbm-wrap .ctrls input[type="text"] { flex: 1; min-width: 160px; }
+  .snhbm-wrap .ctrls select { min-width: 130px; }
+  .snhbm-wrap .ctrls button { padding: 7px 14px; border: none; border-radius: 5px; cursor: pointer; font-size: 13px; background: #e2e8f0; color: #333; }
+  .snhbm-wrap .ctrls button:hover { background: #cbd5e0; }
+  .snhbm-wrap .stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .snhbm-wrap .sc { background: #f7fafc; border: 1px solid #e2e8f0; padding: 10px 16px; border-radius: 7px; }
+  .snhbm-wrap .sc .sl { font-size: 11px; color: #718096; text-transform: uppercase; }
+  .snhbm-wrap .sc .sv { font-size: 20px; font-weight: 700; color: #2d3748; }
+  .snhbm-wrap .tw { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .snhbm-wrap .tw-top { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: thin; margin-bottom: -1px; }
+  .snhbm-wrap .tw-top-inner { height: 1px; }
+  .snhbm-wrap table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 1100px; }
+  .snhbm-wrap thead { background: #2b6cb0; color: #fff; }
+  .snhbm-wrap th { padding: 9px 6px; text-align: left; cursor: pointer; white-space: nowrap; user-select: none; font-size: 12px; border: none; }
+  .snhbm-wrap th:hover { background: #2c5282; }
+  .snhbm-wrap th:first-child { cursor: default; }
+  .snhbm-wrap th:first-child:hover { background: #2b6cb0; }
+  .snhbm-wrap td { padding: 7px 6px; border-bottom: 1px solid #edf2f7; vertical-align: top; }
+  .snhbm-wrap tr:hover td { background: #ebf4ff; }
+  .snhbm-wrap tr.chk td { background: #f0fff4; }
+  .snhbm-wrap .sa { color: #276749; background: #c6f6d5; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap; }
+  .snhbm-wrap .sr { color: #9b2c2c; background: #fed7d7; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap; }
+  .snhbm-wrap .su { color: #975a16; background: #fefcbf; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; white-space: nowrap; }
+  .snhbm-wrap .pr { font-weight: 600; white-space: nowrap; }
+  .snhbm-wrap .pa { color: #276749; font-size: 10px; }
+  .snhbm-wrap .ft { display: inline-block; background: #edf2f7; padding: 1px 5px; border-radius: 3px; font-size: 10px; margin: 1px; white-space: nowrap; }
+  .snhbm-wrap .ds { max-width: 220px; font-size: 11px; color: #555; line-height: 1.3; }
+  .snhbm-wrap a { color: #2b6cb0; text-decoration: none; }
+  .snhbm-wrap a:hover { text-decoration: underline; }
+  .snhbm-wrap input[type="checkbox"] { width: 15px; height: 15px; cursor: pointer; }
+  .snhbm-wrap .arr::after { content: ''; margin-left: 3px; font-size: 9px; }
+  .snhbm-wrap .asc::after { content: ' \25B2'; }
+  .snhbm-wrap .dsc::after { content: ' \25BC'; }
+</style>
+
+<div class="snhbm-wrap" id="snhbmApp">
+  <h2>SNHBM - Properties for Sale in Luxembourg</h2>
+  <p class="sub">Source: <a href="https://snhbm.lu/projets/vente/" target="_blank" rel="noopener">snhbm.lu/projets/vente</a> | Updated: 2 Feb 2026</p>
+
+  <div class="stats" id="bStats"></div>
+
+  <div class="ctrls">
+    <input type="text" id="bSearch" placeholder="Search...">
+    <select id="bType"><option value="">All types</option></select>
+    <select id="bStatus"><option value="">All statuses</option><option value="available">Available</option><option value="reserved">Reserved</option><option value="construction">Under construction</option></select>
+    <select id="bElig"><option value="">All eligibility</option></select>
+    <button onclick="bClear()">Clear</button>
+  </div>
+
+  <div class="tw-top" id="bScrollTop"><div class="tw-top-inner" id="bScrollTopInner"></div></div>
+  <div class="tw" id="bScrollBot">
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" id="bAll"></th>
+          <th>Link</th>
+          <th onclick="bSort(1)"><span class="arr" id="bH1">Type</span></th>
+          <th onclick="bSort(2)"><span class="arr" id="bH2">Location</span></th>
+          <th onclick="bSort(4)"><span class="arr" id="bH4">Price (EUR)</span></th>
+          <th onclick="bSort(5)"><span class="arr" id="bH5">Surface</span></th>
+          <th onclick="bSort(6)"><span class="arr" id="bH6">Beds</span></th>
+          <th onclick="bSort(7)"><span class="arr" id="bH7">Energy</span></th>
+          <th onclick="bSort(8)"><span class="arr" id="bH8">Year</span></th>
+          <th onclick="bSort(9)"><span class="arr" id="bH9">Status</span></th>
+          <th onclick="bSort(10)"><span class="arr" id="bH10">Eligibility</span></th>
+          <th onclick="bSort(11)"><span class="arr" id="bH11">Condition</span></th>
+          <th>Features</th>
+          <th>Details</th>
+          <th onclick="bSort(3)"><span class="arr" id="bH3">Project</span></th>
+        </tr>
+      </thead>
+      <tbody id="bBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+//<![CDATA[
+(function(){
+var D=[
+{i:1,r:"REV-2775",t:"House",l:"Lamadelaine",p:"",pr:580000,pa:528952,s:"136.27",b:"4",e:"AA",y:"2021",st:"Available",el:"Affordable",co:"Resale",pk:1,cl:0,ev:0,te:1,ba:0,gd:1,ki:1,mo:null,cp:null,d:"4-bed house, 136m\u00B2, garage, garden, terrace. 3 floors. Land: 2.16 ares.",u:"https://snhbm.lu/projets/vente/bien/rev-2775/"},
+{i:2,r:"REV-IH2533",t:"House",l:"Dudelange",p:"",pr:589000,pa:null,s:"138.78",b:"4",e:"BC",y:"2012",st:"Available",el:"Moderate-cost",co:"Resale",pk:1,cl:1,ev:0,te:1,ba:0,gd:1,ki:1,mo:null,cp:null,d:"4-bed house, 139m\u00B2, open 3 sides, garage, cellar, garden. Land: 3.88 ares.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2533/"},
+{i:3,r:"REV-KE2-MU",t:"Houses",l:"Elmen (Olm)",p:"ELMEN",pr:581670,pa:null,s:"122-211",b:"3-5",e:"NZEB",y:"-",st:"Under construction",el:"Affordable/Moderate",co:"VEFA",pk:1,cl:0,ev:0,te:1,ba:0,gd:1,ki:0,mo:null,cp:"Nov 2027",d:"Solid wood houses, 3-5 beds, 122-211m\u00B2. Centralized parking. Up to \u20AC938,257.",u:"https://snhbm.lu/projets/vente/bien/rev-ke2-mu/"},
+{i:4,r:"REV-IH3297",t:"Apartment",l:"Contern",p:"Azurite",pr:405000,pa:377612,s:"81.93",b:"2",e:"AB",y:"2023",st:"Reserved",el:"Affordable",co:"New",pk:1,cl:1,ev:1,te:0,ba:1,gd:0,ki:1,mo:380,cp:null,d:"2-bed apt, 82m\u00B2, 2nd floor, equipped kitchen, balcony, garage, cellar.",u:"https://snhbm.lu/projets/vente/bien/rev-ih3297-101/"},
+{i:5,r:"REV-IH2867",t:"Apartment",l:"Lux-Kirchberg",p:"MEISSA",pr:439000,pa:409929,s:"81.53",b:"2",e:"AA",y:"2021",st:"Reserved",el:"Affordable",co:"New",pk:1,cl:1,ev:1,te:0,ba:1,gd:0,ki:1,mo:250,cp:null,d:"2-bed apt, 82m\u00B2, 2nd floor, 2 balconies, parking, cellar.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2867-187/"},
+{i:6,r:"REV-IH3191",t:"Apartment",l:"Olm",p:"LAVANDULA",pr:460000,pa:null,s:"83.10",b:"2",e:"BB",y:"2023",st:"Reserved",el:"Moderate-cost",co:"New",pk:1,cl:1,ev:0,te:1,ba:0,gd:0,ki:1,mo:270,cp:null,d:"2-bed apt, 83m\u00B2, ground floor, terrace, ext. cellar. Parking \u20AC58/mo.",u:"https://snhbm.lu/projets/vente/bien/rev-ih3191-002/"},
+{i:7,r:"REV-IH2715",t:"Apartment",l:"Lux-Kirchberg",p:"COXA",pr:415000,pa:null,s:"77.83",b:"2",e:"AA",y:"2019",st:"Reserved",el:"Moderate-cost",co:"Resale",pk:1,cl:1,ev:1,te:1,ba:0,gd:0,ki:1,mo:250,cp:null,d:"2-bed apt, 78m\u00B2, ground floor, 2 terraces, cellar, parking.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2715-180/"},
+{i:8,r:"REV-IH3015",t:"Semi-detached",l:"Bettendorf",p:"",pr:655000,pa:601018,s:"139.93",b:"4",e:"AA",y:"2021",st:"Reserved",el:"Affordable",co:"New",pk:1,cl:0,ev:0,te:1,ba:0,gd:1,ki:1,mo:null,cp:null,d:"4-bed semi-detached, 140m\u00B2, 3 levels, carport 2 cars. Land: 3.45 ares.",u:"https://snhbm.lu/projets/vente/bien/rev-ih3015/"},
+{i:9,r:"ESCH-APT",t:"Apartments",l:"Esch-sur-Alzette",p:"ALBI",pr:319176,pa:273943,s:"50-119",b:"1-4",e:"NZEB",y:"-",st:"17 available",el:"Affordable/Moderate",co:"VEFA",pk:0,cl:1,ev:1,te:1,ba:1,gd:1,ki:0,mo:null,cp:"Jun 2026",d:"22 apts, 1-4 beds, 50-119m\u00B2. 17 available. Parking \u20AC33k extra. Up to \u20AC684,859.",u:"https://snhbm.lu/projets/vente/bien/esch-sur-alzette-apt/"},
+{i:10,r:"ESCH-MU",t:"Houses",l:"Esch-sur-Alzette",p:"Nonnewisen",pr:418592,pa:null,s:"100-138",b:"3-4",e:"NZEB",y:"-",st:"10 available",el:"Affordable/Moderate",co:"VEFA",pk:1,cl:1,ev:0,te:1,ba:0,gd:0,ki:0,mo:null,cp:"Apr 2027",d:"Houses 3-4 beds, 100-138m\u00B2, carport, cellar. 10 of 23 available. Up to \u20AC569,971.",u:"https://snhbm.lu/projets/vente/bien/esch-sur-alzette-mu/"},
+{i:11,r:"REV-KE2-APP",t:"Apartments",l:"Elmen (Olm)",p:"FAGUS/FRAXINUS/LARIX",pr:423992,pa:null,s:"72-110",b:"2-3",e:"NZEB",y:"-",st:"Under construction",el:"Affordable/Moderate",co:"VEFA",pk:1,cl:1,ev:0,te:0,ba:1,gd:0,ki:0,mo:null,cp:"Q2 2025-Apr 2027",d:"Apts in 3 residences, 2-3 beds, 72-110m\u00B2. Centralized parking. Up to \u20AC574,861.",u:"https://snhbm.lu/projets/vente/bien/rev-ke2-app/"},
+{i:12,r:"ERPELDANGE",t:"Apartments",l:"Erpeldange-sur-Sure",p:"EPILLET/GRAPPE",pr:482193,pa:427873,s:"77-128",b:"1-4",e:"NZEB",y:"-",st:"1 available",el:"Affordable",co:"VEFA",pk:1,cl:1,ev:1,te:1,ba:1,gd:1,ki:0,mo:null,cp:"Feb 2026",d:"1-4 bed apts, 77-128m\u00B2. Only 1 unit left. Underground parking. Up to \u20AC731,575.",u:"https://snhbm.lu/projets/vente/bien/erpeldange-sur-sure/"},
+{i:13,r:"REV-IH2901",t:"Duplex",l:"Belvaux",p:"BELVIS",pr:505637,pa:468543,s:"114.22",b:"3",e:"AA",y:"2020",st:"Reserved",el:"Affordable",co:"Resale",pk:1,cl:1,ev:1,te:1,ba:0,gd:0,ki:1,mo:370,cp:null,d:"3-bed duplex, 114m\u00B2, 2nd-3rd floor, equipped kitchen, terrace.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2901-040/"},
+{i:14,r:"REV-IH2866",t:"Apartment",l:"Lux-Kirchberg",p:"LEONIS",pr:419000,pa:389929,s:"76.73",b:"2",e:"AA",y:"2021",st:"Reserved",el:"Affordable",co:"New",pk:1,cl:1,ev:1,te:0,ba:1,gd:0,ki:1,mo:220,cp:null,d:"2-bed apt, 77m\u00B2, 3rd floor, 2 balconies, parking, wine cellar.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2866-196/"},
+{i:15,r:"REV-IH2845",t:"Apartment",l:"Junglinster",p:"CASTANEA",pr:456500,pa:402168,s:"84.29",b:"2",e:"AA",y:"2020",st:"Reserved",el:"Affordable",co:"New",pk:1,cl:1,ev:1,te:0,ba:1,gd:0,ki:1,mo:380,cp:null,d:"2-bed apt, 84m\u00B2, 1st floor, equipped kitchen, balcony, cellar.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2845-103/"},
+{i:16,r:"REV-IH2577",t:"Apartment",l:"Junglinster",p:"LINCERA",pr:399000,pa:null,s:"85.36",b:"2",e:"AB",y:"2013",st:"Reserved",el:"Moderate-cost",co:"Resale",pk:1,cl:1,ev:1,te:1,ba:0,gd:0,ki:1,mo:370,cp:null,d:"2-bed apt, 85m\u00B2, ground floor, terrace, cellar, parking.",u:"https://snhbm.lu/projets/vente/bien/rev-ih2577-065/"},
+{i:17,r:"REV-IH3279",t:"House + annex",l:"Elmen (Olm)",p:"ELMEN",pr:1220683,pa:998000,s:"200.30",b:"4",e:"AA",y:"2024",st:"Available",el:"Affordable/Moderate",co:"New",pk:1,cl:0,ev:0,te:1,ba:0,gd:1,ki:1,mo:null,cp:null,d:"4-bed house + independent annex, 200m\u00B2. Annex for professional use. Land: 3.55 ares.",u:"https://snhbm.lu/projets/vente/bien/rev-ih3279/"}
+];
+
+var sc=-1,sa=true,ck={};
+function fm(n){return n?'\u20AC'+n.toLocaleString('en'):'-';}
+function sc2(s){var x=s.toLowerCase();if(x.indexOf('available')>=0)return'sa';if(x.indexOf('reserved')>=0||x.indexOf('sold')>=0)return'sr';if(x.indexOf('construction')>=0)return'su';return'';}
+function ft(p){var f=[];if(p.pk)f.push('Parking');if(p.cl)f.push('Cellar');if(p.ev)f.push('Elevator');if(p.te)f.push('Terrace');if(p.ba)f.push('Balcony');if(p.gd)f.push('Garden');if(p.ki)f.push('Kitchen');return f.map(function(x){return'<span class="ft">'+x+'</span>';}).join(' ');}
+
+function gf(){
+  var q=document.getElementById('bSearch').value.toLowerCase();
+  var ft2=document.getElementById('bType').value;
+  var fs=document.getElementById('bStatus').value;
+  var fe=document.getElementById('bElig').value;
+  return D.filter(function(p){
+    if(q&&(p.t+p.l+p.p+p.r+p.d+p.e+p.co).toLowerCase().indexOf(q)<0)return false;
+    if(ft2&&p.t.toLowerCase().indexOf(ft2.toLowerCase())<0)return false;
+    if(fs){var x=p.st.toLowerCase();if(fs==='available'&&x.indexOf('available')<0)return false;if(fs==='reserved'&&x.indexOf('reserved')<0)return false;if(fs==='construction'&&x.indexOf('construction')<0)return false;}
+    if(fe&&p.el.toLowerCase().indexOf(fe.toLowerCase())<0)return false;
+    return true;
+  });
+}
+
+function gv(p,c){
+  switch(c){
+    case 1:return p.t;case 2:return p.l;case 3:return p.p;case 4:return p.pr||0;
+    case 5:return parseFloat(p.s)||0;case 6:return parseInt(p.b)||0;case 7:return p.e;
+    case 8:return p.y;case 9:return p.st;case 10:return p.el;case 11:return p.co;
+  }return '';
+}
+
+function rn(){
+  var data=gf();
+  if(sc>=0)data.sort(function(a,b){var va=gv(a,sc),vb=gv(b,sc);if(typeof va==='number'&&typeof vb==='number')return sa?va-vb:vb-va;va=String(va).toLowerCase();vb=String(vb).toLowerCase();return sa?va.localeCompare(vb):vb.localeCompare(va);});
+  var h='';
+  for(var n=0;n<data.length;n++){
+    var p=data[n],ic=ck[p.i];
+    h+='<tr class="'+(ic?'chk':'')+'">';
+    h+='<td><input type="checkbox" '+(ic?'checked':'')+' onchange="bTog('+p.i+')"></td>';
+    h+='<td><a href="'+p.u+'" target="_blank" rel="noopener">View</a></td>';
+    h+='<td>'+p.t+'</td>';
+    h+='<td><strong><a href="https://www.google.com/maps/search/'+encodeURIComponent(p.l+', Luxembourg')+'" target="_blank" rel="noopener">'+p.l+'</a></strong></td>';
+    h+='<td class="pr">'+fm(p.pr)+(p.pa?'<br><span class="pa">Aid: '+fm(p.pa)+'</span>':'')+'</td>';
+    h+='<td>'+p.s+' m\u00B2</td>';
+    h+='<td>'+p.b+'</td>';
+    h+='<td>'+p.e+'</td>';
+    h+='<td>'+p.y+(p.cp?'<br><small>Due: '+p.cp+'</small>':'')+'</td>';
+    h+='<td><span class="'+sc2(p.st)+'">'+p.st+'</span></td>';
+    h+='<td>'+p.el+'</td>';
+    h+='<td>'+p.co+'</td>';
+    h+='<td>'+ft(p)+'</td>';
+    h+='<td><div class="ds">'+p.d+'</div></td>';
+    h+='<td>'+p.p+'</td>';
+    h+='</tr>';
+  }
+  document.getElementById('bBody').innerHTML=h;
+  var av=data.filter(function(p){return p.st.toLowerCase().indexOf('available')>=0;}).length;
+  var cn=0;for(var k in ck)if(ck[k])cn++;
+  var mn=Infinity,mx=0;for(var j=0;j<data.length;j++){if(data[j].pr&&data[j].pr<mn)mn=data[j].pr;if(data[j].pr&&data[j].pr>mx)mx=data[j].pr;}
+  document.getElementById('bStats').innerHTML='<div class="sc"><div class="sl">Shown</div><div class="sv">'+data.length+'</div></div><div class="sc"><div class="sl">Available</div><div class="sv">'+av+'</div></div><div class="sc"><div class="sl">Price range</div><div class="sv">'+fm(mn)+' - '+fm(mx)+'</div></div><div class="sc"><div class="sl">Checked</div><div class="sv">'+cn+'</div></div>';
+}
+
+window.bSort=function(c){
+  for(var n=1;n<=11;n++){var el=document.getElementById('bH'+n);if(el){el.className='arr';}}
+  if(sc===c){sa=!sa;}else{sc=c;sa=true;}
+  var el2=document.getElementById('bH'+c);if(el2)el2.className='arr '+(sa?'asc':'dsc');
+  rn();
+};
+window.bTog=function(id){ck[id]=!ck[id];rn();};
+window.bClear=function(){
+  document.getElementById('bSearch').value='';
+  document.getElementById('bType').value='';
+  document.getElementById('bStatus').value='';
+  document.getElementById('bElig').value='';
+  sc=-1;sa=true;
+  for(var n=1;n<=11;n++){var el=document.getElementById('bH'+n);if(el)el.className='arr';}
+  rn();
+};
+
+document.getElementById('bAll').addEventListener('change',function(){
+  var data=gf();for(var n=0;n<data.length;n++)ck[data[n].i]=this.checked;rn();
+});
+
+// populate dropdowns
+var ts={},es={};
+for(var n=0;n<D.length;n++){ts[D[n].t]=1;es[D[n].el]=1;}
+var tSel=document.getElementById('bType');for(var k in ts){var o=document.createElement('option');o.value=k;o.textContent=k;tSel.appendChild(o);}
+var eSel=document.getElementById('bElig');for(var k in es){var o=document.createElement('option');o.value=k;o.textContent=k;eSel.appendChild(o);}
+
+document.getElementById('bSearch').addEventListener('input',rn);
+document.getElementById('bType').addEventListener('change',rn);
+document.getElementById('bStatus').addEventListener('change',rn);
+document.getElementById('bElig').addEventListener('change',rn);
+
+// Sync top and bottom horizontal scrollbars
+var sTop=document.getElementById('bScrollTop'),sBot=document.getElementById('bScrollBot'),sInner=document.getElementById('bScrollTopInner');
+var syncing=false;
+function syncWidth(){sInner.style.width=sBot.scrollWidth+'px';}
+sTop.addEventListener('scroll',function(){if(syncing)return;syncing=true;sBot.scrollLeft=sTop.scrollLeft;syncing=false;});
+sBot.addEventListener('scroll',function(){if(syncing)return;syncing=true;sTop.scrollLeft=sBot.scrollLeft;syncing=false;});
+var origRn=rn;
+rn=function(){origRn();syncWidth();};
+
+rn();
+})();
+//]]>
+</script>
